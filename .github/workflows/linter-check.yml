@@ -1,8 +1,11 @@
 name: linter-check
-on: push
+on:
+  - push
+  - pull_request
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: make lint
+      - name: Run linter
+        run: |
+          make lint
