@@ -1,10 +1,21 @@
 import readlineSync from 'readline-sync';
+import startBrainEvenGame from './brain-even-game.js';
+import { welcome, nameQuestion, greeting } from './consts.js';
 
-const askName = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
+const startGame = (type, name) => {
+  if (type === 'even') {
+    startBrainEvenGame(name);
+  }
+};
 
-  console.log(`Hello, ${name}!`);
+const askName = (type) => {
+  console.log(welcome);
+
+  const name = readlineSync.question(nameQuestion);
+
+  console.log(greeting(name));
+
+  startGame(type, name);
 };
 
 export default askName;
