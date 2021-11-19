@@ -20,11 +20,18 @@ export const getRandomOperator = () => {
 export const getQuestion = (type) => {
   const questions = {
     even: getRandomNumber(),
-    prime: getRandomNumber(),
     calc: `${getRandomNumber()} ${getRandomOperator()} ${getRandomNumber()}`,
-    gcd: `${getRandomNumber()} ${getRandomNumber}`,
+    gcd: `${getRandomNumber()} ${getRandomNumber()}`,
+    prime: getRandomNumber(),
     progression: `${getRandomNumber()}`,
   };
 
   return questions[type];
+};
+
+export const findGCD = (a, b) => {
+  if (b) {
+    return findGCD(b, a % b);
+  }
+  return a;
 };

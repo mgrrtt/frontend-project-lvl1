@@ -2,6 +2,9 @@ import readlineSync from 'readline-sync';
 
 import checkEvenAnswer from './games/brain-even-game.js';
 import checkCalcAnswer from './games/brain-calc-game.js';
+import checkGCDAnswer from './games/brain-gcd-game.js';
+import checkPrimeAnswer from './games/brain-prime-game.js';
+import checkProgressionAnswer from './games/brain-progression-game.js';
 
 import { getQuestion } from './utils.js';
 
@@ -18,9 +21,9 @@ import {
 const gameCheck = {
   even: checkEvenAnswer,
   calc: checkCalcAnswer,
-  prime: checkCalcAnswer,
-  gcd: checkCalcAnswer,
-  progression: checkCalcAnswer,
+  gcd: checkGCDAnswer,
+  prime: checkPrimeAnswer,
+  progression: checkProgressionAnswer,
 };
 
 const startGame = (type, name) => {

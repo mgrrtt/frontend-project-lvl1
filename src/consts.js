@@ -15,9 +15,9 @@ export const description = (type) => {
   const descriptions = {
     even: 'Answer "yes" if the number is even, otherwise answer "no".',
     calc: 'What is the result of the expression?',
-    gcd: '',
-    progression: '',
+    gcd: 'Find the greatest common divisor of given numbers.',
     prime: '',
+    progression: '',
   };
 
   return descriptions[type];
