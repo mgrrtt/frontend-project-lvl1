@@ -1,6 +1,9 @@
 /* eslint-disable no-param-reassign */
+
+import { isEven } from '../utils.js';
+
 const checkEvenAnswer = (userData) => {
-  userData.expected = userData.question % 2 === 0 ? 'yes' : 'no';
+  userData.expected = isEven(userData.question) ? 'yes' : 'no';
 
   if (userData.expected === userData.answer) {
     userData.correctCount += 1;

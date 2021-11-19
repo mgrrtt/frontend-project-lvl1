@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+
 const checkProgressionAnswer = (userData) => {
   const array = userData.question.split(' ');
   const empty = array.indexOf('..');

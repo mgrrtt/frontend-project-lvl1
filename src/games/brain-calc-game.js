@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+
 const checkCalcAnswer = (userData) => {
   const doMath = {
     '+': (x, y) => x + y,
@@ -6,9 +7,9 @@ const checkCalcAnswer = (userData) => {
     '*': (x, y) => x * y,
   };
 
-  const [left, operator, right] = userData.question.split(' ');
+  const [x, operator, y] = userData.question.split(' ');
 
-  userData.expected = doMath[operator](Number(left), Number(right));
+  userData.expected = doMath[operator](Number(x), Number(y));
 
   if (userData.expected === Number(userData.answer)) {
     userData.correctCount += 1;

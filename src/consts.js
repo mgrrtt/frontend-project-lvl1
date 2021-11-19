@@ -16,7 +16,7 @@ export const description = (type) => {
     even: 'Answer "yes" if the number is even, otherwise answer "no".',
     calc: 'What is the result of the expression?',
     gcd: 'Find the greatest common divisor of given numbers.',
-    prime: '',
+    prime: 'Answer "yes" if given number is prime. Otherwise answer "no".',
     progression: 'What number is missing in the progression?',
   };
 
@@ -24,9 +24,6 @@ export const description = (type) => {
 };
 
 // numbers
-export const min = 1;
-export const max = 100;
-export const maxOperators = 3;
 export const maxCorrectCount = 3;
 export const progressionStep = 2;
 export const progressionLength = 10;

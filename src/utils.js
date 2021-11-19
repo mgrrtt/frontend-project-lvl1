@@ -1,12 +1,9 @@
 import {
-  min,
-  max,
-  maxOperators,
   progressionLength,
   progressionStep,
 } from './consts.js';
 
-export const getRandomNumber = () => {
+export const getRandomNumber = (min = 1, max = 100) => {
   const rand = min + Math.random() * (max + 1 - min);
 
   return Math.floor(rand);
@@ -14,9 +11,8 @@ export const getRandomNumber = () => {
 
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const rand = min + Math.random() * (maxOperators - min);
 
-  return operators[Math.floor(rand)];
+  return operators[getRandomNumber(0, operators.length - 1)];
 };
 
 export const getProgression = () => {
@@ -26,9 +22,7 @@ export const getProgression = () => {
     progression.push(progression[i] + progressionStep);
   }
 
-  const rand = min + Math.random() * (progressionLength - min);
-
-  progression[Math.floor(rand)] = '..';
+  progression[getRandomNumber(1, progressionLength - 1)] = '..';
 
   return progression.join(' ');
 };
@@ -45,9 +39,22 @@ export const getQuestion = (type) => {
   return questions[type];
 };
 
-export const findGCD = (a, b) => {
-  if (b) {
-    return findGCD(b, a % b);
+export const findGCD = (x, y) => {
+  if (y) {
+    return findGCD(y, x % y);
   }
-  return a;
+
+  return x;
+};
+
+export const isEven = (number) => number % 2 === 0;
+
+export const isPrime = (number) => {
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+
+  return number > 1;
 };
