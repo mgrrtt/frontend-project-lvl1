@@ -17,7 +17,7 @@ export const description = (type) => {
     calc: 'What is the result of the expression?',
     gcd: 'Find the greatest common divisor of given numbers.',
     prime: '',
-    progression: '',
+    progression: 'What number is missing in the progression?',
   };
 
   return descriptions[type];
@@ -26,5 +26,7 @@ export const description = (type) => {
 // numbers
 export const min = 1;
 export const max = 100;
-export const maxOperators = 2; // 0 1 2 - length 3
+export const maxOperators = 3;
 export const maxCorrectCount = 3;
+export const progressionStep = 2;
+export const progressionLength = 10;

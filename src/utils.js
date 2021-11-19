@@ -2,6 +2,8 @@ import {
   min,
   max,
   maxOperators,
+  progressionLength,
+  progressionStep,
 } from './consts.js';
 
 export const getRandomNumber = () => {
@@ -12,9 +14,23 @@ export const getRandomNumber = () => {
 
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const rand = min + Math.random() * (maxOperators + 1 - min);
+  const rand = min + Math.random() * (maxOperators - min);
 
   return operators[Math.floor(rand)];
+};
+
+export const getProgression = () => {
+  const progression = [getRandomNumber()];
+
+  for (let i = 0; i < progressionLength - 1; i += 1) {
+    progression.push(progression[i] + progressionStep);
+  }
+
+  const rand = min + Math.random() * (progressionLength - min);
+
+  progression[Math.floor(rand)] = '..';
+
+  return progression.join(' ');
 };
 
 export const getQuestion = (type) => {
@@ -23,7 +39,7 @@ export const getQuestion = (type) => {
     calc: `${getRandomNumber()} ${getRandomOperator()} ${getRandomNumber()}`,
     gcd: `${getRandomNumber()} ${getRandomNumber()}`,
     prime: getRandomNumber(),
-    progression: `${getRandomNumber()}`,
+    progression: `${getProgression()}`,
   };
 
   return questions[type];

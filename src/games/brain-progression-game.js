@@ -1,8 +1,11 @@
 /* eslint-disable no-param-reassign */
 const checkProgressionAnswer = (userData) => {
-  userData.expected = userData.question % 2 === 0 ? 'yes' : 'no';
+  const array = userData.question.split(' ');
+  const empty = array.indexOf('..');
 
-  if (userData.expected === userData.answer) {
+  userData.expected = Number(array[empty - 1]) + 2;
+
+  if (userData.expected === Number(userData.answer)) {
     userData.correctCount += 1;
 
     return true;
