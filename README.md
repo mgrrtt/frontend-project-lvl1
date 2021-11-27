@@ -2,40 +2,55 @@
 [![Actions Status](https://github.com/mgrrtt/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/mgrrtt/frontend-project-lvl1/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) [![Node CI](https://github.com/mgrrtt/frontend-project-lvl1/workflows/linter-check/badge.svg)](https://github.com/mgrrtt/frontend-project-lvl1/actions)
 
 ## Описание
-*«Игры разума»* — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
+*«Игры разума»* — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново.
 
+
+## Игры
 
 - **Калькулятор**
 
     Арифметические выражения, которые необходимо вычислить.
 
-    > $ brain-calc
+    ```
+    $ brain-calc
+    ```
 
 
 - **Прогрессия**
 
     Поиск пропущенных чисел в последовательности чисел.
 
-    > $ brain-progression
+    ```
+    $ brain-progression
+    ```
 
 
 - **Определение четного числа**
 
-    > $ brain-even
+    ```
+    $ brain-even
+    ```
 
 
 - **Определение наибольшего общего делителя**
 
-    > $ brain-gcd
+    ```
+    $ brain-gcd
+    ```
 
 
 - **Определение простого числа**
 
-    > $ brain-prime
+    ```
+    $ brain-prime
+    ```
 
 
 ## Установка
-*Для Node.js версии 13 и выше*
+*Node.js 13+*
 
-> 1. git clone
-> 2. make install
+    
+    $ git clone
+    $ make install
+    
+    
