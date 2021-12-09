@@ -4,6 +4,8 @@
 ## Описание
 *«Игры разума»* — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново.
 
+[![asciicast](https://asciinema.org/a/P07lvnUPrkNMAmKmZADZQImhh.svg)](https://asciinema.org/a/P07lvnUPrkNMAmKmZADZQImhh)
+
 
 ## Игры
 
@@ -52,5 +54,8 @@
     
     $ git clone
     $ make install
-    
+    $ (sudo) npm link
+
+
+Если появляется ошибка *'Syntax Error: Unexpected Identifier'* - проблема в версии Node.js (подробнее: https://github.com/nodesource/distributions)
     
